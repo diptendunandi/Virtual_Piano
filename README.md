@@ -1,77 +1,56 @@
-Virtual Piano with SFML
+Virtual Piano
 
-A simple virtual piano application built using SFML (Simple and Fast Multimedia Library). This program simulates a piano with 12 keys (7 white keys and 5 black keys) and plays corresponding sounds when the user clicks on the keys.
-Features
+This is a simple virtual piano built using the SFML library, which allows you to play piano sounds by clicking on the piano keys displayed on the screen. Each key corresponds to a sound file (WAV format) that plays when you click on it. This project demonstrates how to use SFML for creating a graphical interface, handling mouse input, and playing audio.
+Features:
 
-    7 White Keys: Representing natural notes (C, D, E, F, G, A, B).
-    5 Black Keys: Representing sharp notes (C#, D#, F#, G#, A#).
-    Mouse Interaction: Click on the white and black keys to play corresponding piano sounds.
-    Audio Files: Each key is associated with a .wav sound file.
+    Virtual Piano Interface: 7 white piano keys and 5 black piano keys.
+    Sound Playback: Each key plays a unique piano note when clicked.
+    Mouse Interaction: Click on the piano keys to play sounds.
 
-Requirements
+Requirements:
 
-    SFML Library: Ensure you have SFML installed on your system.
-    Audio Files: This project uses .wav files for each key. Ensure the sound files are correctly named and placed in the project directory.
-        The files should be named: piano_key_0.wav, piano_key_1.wav, ..., piano_key_11.wav.
-    C++ Compiler: A compatible C++ compiler (e.g., GCC, Clang).
+Before running the program, make sure you have the following dependencies installed:
 
-Installation
-1. Install SFML
+    SFML (Simple and Fast Multimedia Library):
 
-Follow the official SFML installation guide for your platform:
+        SFML is used for graphics, audio, and window handling.
 
-    SFML Download Page
+        To install SFML on Linux, use the following commands:
 
-2. Compile the Project
+        sudo apt-get update
+        sudo apt-get install libsfml-dev
 
-To compile the project, you need to link the SFML libraries. Here's an example of how you can compile and link the program with g++:
+        For other systems, visit the SFML download page for installation instructions.
 
-g++ -o virtual_piano main.cpp -lsfml-graphics -lsfml-window -lsfml-audio
+    Sound Files:
+        The program expects .wav files for each piano key to be present in the same directory as the executable.
+        You need to have piano_key_0.wav, piano_key_1.wav, piano_key_2.wav, piano_key_3.wav, piano_key_4.wav, piano_key_5.wav, and piano_key_6.wav files for the corresponding piano keys.
+        You can find free piano sound files online or record them using tools like Audacity or arecord on Linux.
 
-3. Run the Program
+Setup:
 
-Once compiled, run the program:
+    Clone the repository or download the project files.
 
-./virtual_piano
+    Place your .wav sound files for each piano key (named piano_key_0.wav, piano_key_1.wav, etc.) in the same directory as the project.
 
-How to Use
+    Compile the program:
 
-    Start the Application: The application will open a window with a virtual piano layout.
-    Play the Piano: Click on any white or black key to play the sound associated with it.
-    Close the Application: Click the close button of the window to exit the program.
+    If you are using g++ with SFML installed, you can compile the program using the following command:
 
-File Structure
+g++ -o piano piano.cpp -lsfml-graphics -lsfml-window -lsfml-audio
 
-/virtual_piano
-|-- main.cpp                # Main C++ source code
-|-- README.md               # Project README file
-|-- piano_key_0.wav         # Sound file for the first white key (C)
-|-- piano_key_1.wav         # Sound file for the second white key (D)
-|-- ...                     # Additional sound files for the rest of the keys
-|-- piano_key_11.wav        # Sound file for the last black key (A#)
+Run the program:
 
-Sound Files
+After compilation, run the program using the following command:
 
-Make sure that you have the following .wav files in your project folder:
+    ./piano
 
-    piano_key_0.wav -> C (white key)
-    piano_key_1.wav -> D (white key)
-    piano_key_2.wav -> E (white key)
-    piano_key_3.wav -> F (white key)
-    piano_key_4.wav -> G (white key)
-    piano_key_5.wav -> A (white key)
-    piano_key_6.wav -> B (white key)
-    piano_key_7.wav -> C# (black key)
-    piano_key_8.wav -> D# (black key)
-    piano_key_9.wav -> F# (black key)
-    piano_key_10.wav -> G# (black key)
-    piano_key_11.wav -> A# (black key)
+    The virtual piano will appear, and you can click on the keys to play different sounds.
 
-Troubleshooting
+Controls:
 
-    No sound: Make sure you have the .wav sound files correctly named and placed in the same directory as the executable.
-    Missing SFML libraries: Ensure you’ve correctly linked SFML during the compilation.
+    Mouse Click: Click on the piano keys to play sounds. The left mouse button is used to trigger the sound.
 
-License
+License:
 
-This project is open-source and available under the MIT License. See the LICENSE file for more information.
+This project is open-source and released under the MIT License. Feel free to modify and distribute it as you like.
